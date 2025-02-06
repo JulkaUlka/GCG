@@ -69,7 +69,7 @@ export const Input = styled.input`
   }
 `;
 export const Button = styled.button`
-  background: rgba(255, 128, 0, 0.92);
+  background: 6;
   box-shadow: 0 3px 0 0 #bcb8b2;
   border-radius: 4px;
   border: none;
@@ -84,5 +84,27 @@ export const Button = styled.button`
   &:hover {
     background: orange;
     color: #fff;
+  }
+`;
+export const Alert = styled.p`
+  margin: 0 auto 10px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  text-align:center;
+  font-weight: bold;
+  color: rgba(255, 128, 0, 0.92);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @media (min-width:768px){
+    font-size: 16px;
   }
 `;

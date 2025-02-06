@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState,useRef } from "react";
 import PropTypes from "prop-types";
 
 import {
@@ -7,9 +7,11 @@ import {
   Floatlabel,
   Input,
   Button,
+  Alert,
 } from "./UserForm.styled";
 
 function UserForm({ onSubmit, isLoginForm = false }) {
+  const [showAlert, setShowAlert] = useState(false); 
   const nameInputRef = useRef();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -23,7 +25,7 @@ function UserForm({ onSubmit, isLoginForm = false }) {
       password: passwordInputRef.current.value,
     };
     onSubmit(formData);
-
+    setShowAlert(true);
     event.target.reset();
   };
 
@@ -56,7 +58,13 @@ function UserForm({ onSubmit, isLoginForm = false }) {
           required
         />
       </Paragraph>
-
+      {showAlert && (
+        <Alert>
+          {isLoginForm
+            ? "The account does not exist. Please sign up to create an account."
+            : "Something went wrong. Please try again later or contact support."}
+        </Alert>
+      )}
       <Button type="submit">
         {isLoginForm ? "Sign In" : "Create My Account"}
       </Button>
