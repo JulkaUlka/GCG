@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 30vw;
   margin: 0 auto;
-border: 5px solid #000000;
+  border: 5px solid #000000;
   opacity: 0;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
@@ -46,15 +46,10 @@ export const Title = styled.h1`
   }
   @keyframes glow {
     from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgba(255, 128, 0, 0.92),
-        0 0 20px rgba(255, 128, 0, 0.92), 0 0 25px rgba(255, 128, 0, 0.92),
-        0 0 30px rgba(255, 128, 0, 0.92), 0 0 35px rgba(255, 128, 0, 0.92);
+      -webkit-text-stroke: 0px #ffa500;
     }
     to {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff,
-        0 0 30pxrgba (255, 128, 0, 0.92), 0 0 40px rgba(255, 128, 0, 0.92),
-        0 0 50px rgba(255, 128, 0, 0.92), 0 0 60px rgba(255, 128, 0, 0.92),
-        0 0 70px rgba(255, 128, 0, 0.92);
+      -webkit-text-stroke: 3px #ffa500;
     }
   }
 `;
