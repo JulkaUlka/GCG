@@ -29,11 +29,11 @@ export const NavLinkStyled = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: orange;
+    color: #ffa500;
   }
 
   &.active {
-    color: orange;
+    color: #ffa500;
     padding: 6px 12px;
     border-radius: 4px;
     pointer-events: none;

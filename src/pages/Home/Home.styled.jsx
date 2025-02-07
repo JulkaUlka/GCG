@@ -22,17 +22,35 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
+  width: fit-content;
+  padding: 0px 30px;
+  margin: 1vw auto;
+  line-height: normal;
   font-size: 8.5vw;
   font-family: "Bricolage Grotesque", serif;
-  font-optical-sizing: auto;
   font-weight: 800;
-  font-style: normal;
   color: #ffffff;
   text-align: center;
-  opacity: 0;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both,
-    glow 3s ease-in-out infinite alternate;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(#000000, #000000) padding-box,
+    conic-gradient(
+        from var(--angle),
+        #ffa500 0deg,
+        #000000 90deg,
+        #ffa500 180deg,
+        #000000 270deg,
+        #ffa500 360deg
+      )
+      border-box;
+  animation: text-focus-in 1s ease-out both, rotate 5s linear infinite;
   animation-delay: 0s, 1s;
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
 
   @keyframes text-focus-in {
     0% {
@@ -44,12 +62,13 @@ export const Title = styled.h1`
       opacity: 1;
     }
   }
-  @keyframes glow {
-    from {
-      -webkit-text-stroke: 0px #ffa500;
+
+  @keyframes rotate {
+    0% {
+      --angle: 0deg;
     }
-    to {
-      -webkit-text-stroke: 3px #ffa500;
+    100% {
+      --angle: 360deg;
     }
   }
 `;
