@@ -5,12 +5,6 @@ export const Block = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`;
-
-export const Container = styled.div`
-  width: 30vw;
-  margin: 0 auto;
-  border: 5px solid #000000;
   opacity: 0;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
@@ -27,6 +21,14 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const Container = styled.div`
+  width: 30vw;
+  margin: 0 auto;
+  border: 5px solid #000000;
+  
+  
+`;
 export const Frame = styled.div`
   margin-top: 25px;
   border: 3px solid transparent;
@@ -41,7 +43,7 @@ export const Frame = styled.div`
         #ffa500 360deg
       )
       border-box;
-  animation: text-focus-in 1s ease-out both, rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
   animation-delay: 0s, 1s;
 
   @property --angle {
