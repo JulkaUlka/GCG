@@ -9,7 +9,7 @@ export default function Home() {
         <img src={logo} alt="Logo" />
         </Container>
         <Frame>
-          <Title>GCG Lab.</Title>
+          <Title>GCG Lab<span style={{ fontSize: '4.5vw' }}>.</span></Title>
         </Frame>
       </Block>
     </>
