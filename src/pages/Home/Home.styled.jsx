@@ -72,7 +72,7 @@ export const Frame = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 5px;
   line-height: 1;
   font-size: 8.5vw;
   font-family: "Dela Gothic One", serif;
@@ -81,4 +81,7 @@ export const Title = styled.h1`
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
+  @media (min-width: 768px) {
+    padding: 0px 10px 10px 10px;
+  }
 `;
