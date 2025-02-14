@@ -28,6 +28,7 @@ export const Container = styled.div`
   }
 `;
 export const Frame = styled.div`
+  margin-top: 25px;
   border: 3px solid transparent;
   border-radius: 12px;
   background: linear-gradient(#000000, #000000) padding-box,
