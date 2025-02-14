@@ -5,7 +5,6 @@ export const Block = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // height: 100vh;
 `;
 
 export const Container = styled.div`
@@ -73,8 +72,7 @@ export const Frame = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
-  padding: 0px 10px 8px 10px;
-  margin-top: -5px;
+  padding: 0px 10px 10px 10px;
   line-height: 1;
   font-size: 8.5vw;
   font-family: "Dela Gothic One", serif;
