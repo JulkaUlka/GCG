@@ -22,10 +22,7 @@ export const NavLinkStyled = styled(NavLink)`
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (min-width: 768px) {
-    font-size: 20px;
-    font-weight: 700;
-  }
+  view
 
   &:hover,
   &:focus {
