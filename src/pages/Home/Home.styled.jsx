@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Block = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // height: 100vh;
+`;
+
 export const Container = styled.div`
   width: 30vw;
   margin: 0 auto;
@@ -20,17 +28,7 @@ export const Container = styled.div`
     }
   }
 `;
-
-export const Title = styled.h1`
-  width: fit-content;
-  padding: 0px 30px;
-  margin: 1vw auto;
-  line-height: normal;
-  font-size: 8.5vw;
-  font-family: "Bricolage Grotesque", serif;
-  font-weight: 800;
-  color: #ffffff;
-  text-align: center;
+export const Frame = styled.div`
   border: 3px solid transparent;
   border-radius: 12px;
   background: linear-gradient(#000000, #000000) padding-box,
@@ -71,4 +69,18 @@ export const Title = styled.h1`
       --angle: 360deg;
     }
   }
+`;
+
+export const Title = styled.h1`
+  width: 100%;
+  padding: 0px 10px 8px 10px;
+  margin-top: -5px;
+  line-height: 1;
+  font-size: 8.5vw;
+  font-family: "Dela Gothic One", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
 `;
