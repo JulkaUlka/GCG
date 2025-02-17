@@ -78,13 +78,13 @@ export const Title = styled.h1`
   padding: 0px 10px 5px 15px;
   line-height: 1;
   font-size: 8.5vw;
-  font-family: "Dela Gothic One", serif;
+  font-family: 'DrukWideBold', sans-serif;
   font-weight: 100;
   font-style: normal;
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
   @media (min-width: 768px) {
-    padding: 0px 10px 10px 22px;
+    padding: 0px 10px 8px 22px;
   }
 `;
