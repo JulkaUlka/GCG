@@ -40,12 +40,12 @@ export const Container = styled.div`
   }
 `;
 export const AnimationBlock = styled.div`
+  width: 100vw;
   @media (min-width: 992px) {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
     height: auto;
   }
 `;
@@ -120,9 +120,9 @@ export const Slogan = styled.p`
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
-  @media (max-width: 991.9px) {
+  @media (max-width: 991px) {
     opacity: 0;
-    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, focus-in-expand 1500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation-delay: 0s, 1500ms;
 };
 
