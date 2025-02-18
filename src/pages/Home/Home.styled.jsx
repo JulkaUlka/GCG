@@ -125,38 +125,9 @@ export const Slogan = styled.p`
   text-align: center;
   white-space: nowrap;
   @media (max-width: 991px) {
-    opacity: 0;
-    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation-delay: 0s, 1500ms;
-};
-
-    @keyframes text-focus-in {
-      0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-      }
-      100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-      }
-    }
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
- @keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
 `;

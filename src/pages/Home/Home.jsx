@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import gsap from "gsap";
-import { Container, Title, Frame, Block, Slogan, AnimationBlock} from "./Home.styled";
+import {
+  Container,
+  Title,
+  Frame,
+  Block,
+  Slogan,
+  AnimationBlock,
+} from "./Home.styled";
 import logo from "../../img/logo.png";
 
 // Хук для відслідковування медіа-запиту
@@ -38,6 +45,20 @@ export default function Home() {
 
       // Очистка таймлайну при демонтованні або зміні режиму
       return () => tl.kill();
+    } else {
+      const tl = gsap.timeline({ repeat: -1 });
+      tl.to("#image", { duration: 5, scale: 1.2, opacity: 1 })
+        .to("#image", { duration: 5, scale: 0.1, opacity: 0 })
+        .fromTo(
+          "#text",
+          { scale: 0.1, opacity: 0 },
+          { duration: 3, scale: 1.2, opacity: 1 }
+        )
+        .to("#text", { duration: 3, opacity: 1 })
+        .to("#text", { duration: 3, scale: 0.1, opacity: 0 });
+
+      // Очищення таймлайну при демонтованні або зміні режиму
+      return () => tl.kill();
     }
   }, [isDesktop]);
 
@@ -64,12 +85,12 @@ export default function Home() {
           <Container>
             <img src={logo} alt="Logo" />
           </Container>
-          <Frame>
+          <Frame id="image">
             <Title>
               GCG Lab<span style={{ fontSize: "4.5vw" }}>.</span>
             </Title>
           </Frame>
-          <Slogan>
+          <Slogan id="text">
             No limits in tech,
             <br />
             no borders in solutions!
