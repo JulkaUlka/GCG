@@ -104,9 +104,6 @@ export const Title = styled.h1`
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
-  @media (min-width: 768px) {
-    padding: 0px 10px 8px 22px;
-  }
 `;
 
 export const Slogan = styled.p`
