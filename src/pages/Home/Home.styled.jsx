@@ -30,13 +30,20 @@ export const Block = styled.div`
 
 export const Container = styled.div`
   width: 30vw;
+  height: auto;
   margin: 0 auto;
   border: 5px solid #000000;
   @media (min-width: 992px) {
+    width: 30vw;
+    height: auto;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
+  }
+  @media (max-height: 500px) {
+    width: 100px;
+    height: 150px;
   }
 `;
 export const AnimationBlock = styled.div`
@@ -119,7 +126,7 @@ export const Slogan = styled.p`
   white-space: nowrap;
   @media (max-width: 991px) {
     opacity: 0;
-    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, focus-in-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation-delay: 0s, 1500ms;
 };
 
@@ -136,22 +143,20 @@ export const Slogan = styled.p`
       }
     }
   }
-    @keyframes focus-in-expand {
+ @keyframes tracking-in-expand-fwd-bottom {
   0% {
     letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
+    -webkit-transform: translateZ(-700px) translateY(500px);
+            transform: translateZ(-700px) translateY(500px);
     opacity: 0;
   }
+  40% {
+    opacity: 0.6;
+  }
   100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
-  @media (min-width: 992px) {
-    margin-top: 40px;
-    font-size: 3.5vw;
-    font-weight: 100;
-  }
 `;

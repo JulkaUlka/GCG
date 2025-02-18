@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const StyledForm = styled.form`
   background: #fff;
   padding: 1em 1em 1em;
-  width: 80%;
+  width: 75%;
   max-width: 80%;
   box-shadow: 0 0 1em #222;
   border-radius: 20px;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 40%;
+  top: 50%;
   left: 50%;
   @media (min-width:768px){
     padding: 2em 2em 2em;
@@ -26,6 +26,10 @@ export const StyledForm = styled.form`
     @media (min-width:768px){
     font-size: 30px;
     margin: 0 0 50px 0;
+    
+  }
+    @media (min-height: 300px) {
+    padding: 3px;
   }
   }
 `;
@@ -34,6 +38,9 @@ export const Paragraph = styled.p`
   position: relative;
   font-family: sans-serif;
   font-size: 14px;
+  @media (min-height: 300px) {
+    margin: 0 0 2em 0;
+  }
 `;
 
 export const Floatlabel = styled.label`
@@ -91,7 +98,7 @@ export const Alert = styled.p`
   margin: 0 auto 10px;
   font-family: "Bricolage Grotesque", serif;
   font-size: 14px;
-  text-align:center;
+  text-align: center;
   font-weight: bold;
   color: rgba(255, 128, 0, 0.92);
   opacity: 0;
@@ -105,7 +112,7 @@ export const Alert = styled.p`
       opacity: 1;
     }
   }
-  @media (min-width:768px){
+  @media (min-width: 768px) {
     font-size: 16px;
   }
 `;
