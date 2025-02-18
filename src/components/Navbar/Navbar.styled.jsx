@@ -3,13 +3,11 @@ import { NavLink, Outlet } from "react-router-dom";
 import { HiOutlineHome } from "react-icons/hi2";
 
 export const NavBar = styled.header`
-  // width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  // border-bottom: 1px solid #2a363b;
   padding: 0 25px;
 `;
 

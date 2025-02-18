@@ -70,6 +70,7 @@ export const Input = styled.input`
 `;
 export const Button = styled.button`
   background: rgba(255, 128, 0, 0.92);
+  font-family: "Bricolage Grotesque", serif;
   box-shadow: 0 3px 0 0 #bcb8b2;
   border-radius: 4px;
   border: none;
@@ -88,7 +89,7 @@ export const Button = styled.button`
 `;
 export const Alert = styled.p`
   margin: 0 auto 10px;
-  font-family: "Open Sans";
+  font-family: "Bricolage Grotesque", serif;
   font-size: 14px;
   text-align:center;
   font-weight: bold;

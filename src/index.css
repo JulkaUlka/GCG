@@ -1,6 +1,6 @@
 /* bring in normalize.css styles */
 @import-normalize;
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
   font-family: 'DrukWideBold';
   src: url('../public/fonts/DrukWideBold.ttf') format('truetype');
@@ -13,7 +13,7 @@
 
 body {
   margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bricolage Grotesque", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
@@ -21,10 +21,11 @@ body {
   height: 100%;
   border: none;
   background-color: #000000;
+  overflow: hidden;
 }
 
 code {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Bricolage Grotesque", serif;
 }
 
 h1,
@@ -47,6 +48,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 500px;
   margin:0 auto;
 }

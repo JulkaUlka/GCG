@@ -1,23 +1,29 @@
 import styled from "styled-components";
 
 export const Block = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  @media (max-width: 991px) {
+    opacity: 0;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-      filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-      filter: blur(0px);
-      opacity: 1;
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
     }
   }
 `;
@@ -26,8 +32,22 @@ export const Container = styled.div`
   width: 30vw;
   margin: 0 auto;
   border: 5px solid #000000;
-  
-  
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+`;
+export const AnimationBlock = styled.div`
+  @media (min-width: 992px) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+  }
 `;
 export const Frame = styled.div`
   margin-top: 25px;
@@ -75,10 +95,10 @@ export const Frame = styled.div`
 
 export const Title = styled.h1`
   width: 100%;
-  padding: 0px 10px 5px 15px;
+  padding: 5px 10px 5px 15px;
   line-height: 1;
-  font-size: 8.5vw;
-  font-family: 'DrukWideBold', sans-serif;
+  font-size: 7.5vw;
+  font-family: "DrukWideBold", sans-serif;
   font-weight: 100;
   font-style: normal;
   color: #ffffff;
@@ -86,5 +106,55 @@ export const Title = styled.h1`
   white-space: nowrap;
   @media (min-width: 768px) {
     padding: 0px 10px 8px 22px;
+  }
+`;
+
+export const Slogan = styled.p`
+  width: 100%;
+  margin-top: 20px;
+  line-height: 1;
+  font-size: 4.5vw;
+  font-family: "Bricolage Grotesque", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  @media (max-width: 991.9px) {
+    opacity: 0;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both, focus-in-expand 1500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0s, 1500ms;
+};
+
+    @keyframes text-focus-in {
+      0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+      }
+    }
+  }
+    @keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+  @media (min-width: 992px) {
+    margin-top: 40px;
+    font-size: 3.5vw;
+    font-weight: 100;
   }
 `;
