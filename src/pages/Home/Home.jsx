@@ -47,8 +47,8 @@ export default function Home() {
       return () => tl.kill();
     } else {
       const tl = gsap.timeline({ repeat: -1 });
-      tl.to("#image", { duration: 5, scale: 1.2, opacity: 1 })
-        .to("#image", { duration: 5, scale: 0.1, opacity: 0 })
+      tl.to("#image", { duration: 3, scale: 1.2, opacity: 1 })
+        .to("#image", { duration: 3, scale: 0.1, opacity: 0 })
         .fromTo(
           "#text",
           { scale: 0.1, opacity: 0 },
